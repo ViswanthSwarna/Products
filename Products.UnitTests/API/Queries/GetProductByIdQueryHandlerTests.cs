@@ -32,7 +32,7 @@ namespace Products.UnitTests.API.Queries
 
             // Assert
             Assert.IsNotNull(result);
-            Assert.AreEqual("Test Product", result.Name);
+            Assert.That(result.Name, Is.EqualTo("Test Product"));
             _productRepoMock.Verify(r => r.GetByIdAsync("1"), Times.Once);
         }
 

@@ -40,8 +40,8 @@ namespace Products.UnitTests.API.Queries
 
             // Assert
             Assert.IsNotNull(result);
-            Assert.AreEqual(2, result.Count());
-            Assert.AreEqual("Product A", result.First().Name);
+            Assert.That(result.Count(), Is.EqualTo(2));
+            Assert.That(result.First().Name, Is.EqualTo("Product A"));
             _productRepoMock.Verify(r => r.GetAllAsync(), Times.Once);
         }
     }
