@@ -14,7 +14,7 @@ then in the same Command Prompt we cloned the project
 
 Run
 
-cd Projects/Products.API
+cd Products/Products.API
 
 dotnet ef database update
 
